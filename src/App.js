@@ -73,7 +73,7 @@ class App extends Component {
   // and display a face detection box around detected face(s) 
   onPhotoSubmit = () => {
     this.setState({imgUrl: this.state.input})
-    fetch(`${config.apiUrl}/imageurl`, {
+    fetch(`${config.serverUrl}/imageurl`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -84,7 +84,7 @@ class App extends Component {
       .then(response => {
         console.log('hi', response)
         if (response) {
-          fetch(`${config.apiUrl}/image`, {
+          fetch(`${config.serverUrl}/image`, {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

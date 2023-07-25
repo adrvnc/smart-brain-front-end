@@ -32,7 +32,7 @@ class SignIn extends React.Component {
     // fetches data from the sign in route in our server.
     // receieves a JSON response and will only log a user in when they have entered the correct username and password
     onSubmitSignIn = () => {
-        fetch(`${config.apiUrl}/signin`, {
+        fetch(`${config.serverUrl}/signin`, {
             method: 'post',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({

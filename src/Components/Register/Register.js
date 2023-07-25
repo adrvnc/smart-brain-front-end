@@ -32,7 +32,7 @@ class Register extends React.Component {
     }
 
     onSubmitSignIn = () => {
-        fetch(`${config.apiUrl}/register`, {
+        fetch(`${config.serverUrl}/register`, {
             method: 'post',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
