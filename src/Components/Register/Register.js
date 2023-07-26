@@ -1,7 +1,6 @@
 import React from "react";
 import config from "../../config";
 
-
 class Register extends React.Component {
     constructor() {
         super();

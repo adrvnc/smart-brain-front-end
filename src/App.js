@@ -10,25 +10,27 @@ import SignIn from './Components/SignIn/SignIn';
 import Register from './Components/Register/Register';
 import config from './config';
 
+const initialState = {
+  input: '',
+  imgUrl: '',
+  box: {},
+  route: 'signin', // displays sign in form first
+  isSignedIn: false,
+  user: {
+    id: '',
+    name: '', 
+    email: '',
+    password: '',
+    entries: 0, 
+    joined: '' 
+  }
+}
+
 class App extends Component {
   // creating a state so the app knows, remembers, and updates the value at any time.
   constructor() {
     super();
-    this.state = {
-      input: '',
-      imgUrl: '',
-      box: {},
-      route: 'signin', // displays sign in form first
-      isSignedIn: false,
-      user: {
-        id: '',
-        name: '', 
-        email: '',
-        password: '',
-        entries: 0, 
-        joined: '' 
-      }
-    }
+    this.state = initialState;
   }
 
   // update the state with the user we receive
@@ -95,7 +97,7 @@ class App extends Component {
             .then(count => {
               this.setState(Object.assign(this.state.user, { entries: count}))
             })
-
+            
         }
         this.displayFaceBox(this.calculateFaceLocation(response))
       })
@@ -105,7 +107,7 @@ class App extends Component {
     // allows users to sign in and out 
     onRouteChange = (route) => {
       if (route === 'signout') {
-        this.setState({isSignedIn: false})
+        this.setState(initialState)
       } else if (route === 'home') {
         this.setState({isSignedIn: 'true'})
       }
