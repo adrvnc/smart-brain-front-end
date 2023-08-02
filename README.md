@@ -13,8 +13,8 @@ A comprehensive Full-Stack web application that allows users to register and sub
   - [Reporting Issues](#reporting-issues)
 ## My Process
 ### Built With 
-- **Front-end:** React.js, HTML, CSS 
-- **Back-end (Server):** Express.Js, Node.Js
+- **Front-end:** React, HTML, CSS 
+- **Back-end (Server):** Express.js, Node.js
 - **API Testing:** Postman
 - **Database:** PostgreSQL
 - **Deployment:** GitHub Pages (Front-End), Railway (Server and Database)
