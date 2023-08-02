@@ -1,6 +1,6 @@
 # Smart Brain
 
-A comprehensive Full Stack web application that allows users to register and submit an image address for face detection using the Clarifai API. Whenever a user submits an image to be detected, their rank increases. 
+A comprehensive Full-Stack web application that allows users to register and submit an image address for face detection using the Clarifai API. Whenever a user submits an image to be detected, their rank increases. 
 
 
 ## Table of Contents 
