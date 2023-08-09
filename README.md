@@ -15,6 +15,7 @@ A comprehensive Full-Stack web application that allows users to register and sub
 ### Built With 
 - **Front-end:** React, HTML, CSS 
 - **Back-end (Server):** Express.js, Node.js
+- **API**: Clarifai 
 - **API Testing:** Postman
 - **Database:** PostgreSQL
 - **Deployment:** GitHub Pages (Front-End), Railway (Server and Database)
