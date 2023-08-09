@@ -73,33 +73,38 @@ class App extends Component {
   // sends a request to the server endpoint(imageurl) to detect faces, and the server can then process the request and send back a response.
   // if the face detection was successful, update the users entry count
   // and display a face detection box around detected face(s) 
-  onPhotoSubmit = () => {
-    this.setState({imgUrl: this.state.input})
-    fetch(`${config.serverUrl}/imageurl`, {
-      method: 'post',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
+    onPhotoSubmit = () => {
+      this.setState({imgUrl: this.state.input})
+      fetch(`${config.serverUrl}/imageurl`, {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
         input: this.state.input
+        })
       })
-    })
       .then(response => response.json())
       .then(response => {
-        console.log('hi', response)
-        if (response) {
-          fetch(`${config.serverUrl}/image`, {
+        if (response && response.outputs && response.outputs[0].data && response.outputs[0].data.regions) {
+          // Check if there are any regions detected
+          if (response.outputs[0].data.regions.length > 0) {
+            fetch(`${config.serverUrl}/image`, {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-              id: this.state.user.id
+            id: this.state.user.id
             })
-          })
-            .then(response => response.json())
-            .then(count => {
-              this.setState(Object.assign(this.state.user, { entries: count}))
-            })
-            
+         })
+        .then(response => response.json())
+        .then(count => {
+          this.setState(Object.assign(this.state.user, { entries: count}))
+        })
+      }
+
+        this.displayFaceBox(this.calculateFaceLocation(response));
+      } else {
+        // Handle the case where no regions were detected
+          console.log('No face regions detected.');
         }
-        this.displayFaceBox(this.calculateFaceLocation(response))
       })
       .catch(err => console.log(err));
     }
