@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Smart Brain
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive Full-Stack web application that allows users to register and submit an image address for face detection using the Clarifai API. Whenever a user submits an image to be detected, their rank increases. 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents 
+- [My Process](#my-process)
+  - [Built With](#built-with)
+  - [Installation](#installation)
+- [Important Note About Facial Recognition](#important-note-about-facial-recognition)
+  - [Potential Limitations](#potential-limitations)
+  - [Recommendations for Users](#recommendations-for-users)
+  - [Reporting Issues](#reporting-issues)
+## My Process
+### Built With 
+- **Front-end:** React, HTML, CSS 
+- **Back-end (Server):** Express.js, Node.js
+- **API Testing:** Postman
+- **Database:** PostgreSQL
+- **Deployment:** GitHub Pages (Front-End), Railway (Server and Database)
 
-### `npm start`
+### Installation
+To Start The React App in your browser: 
+- **Step 1:** Clone this repository
+- **Step 2:** Navigate to the project directory in your terminal 
+- **Step 3:** Run ```npm install```
+- **Step 4:** Run ```npm start``` 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To use Clarifai's Facial Recognition API, follow these steps: 
+- **Step 1:** Find an image of a person using any web search engine.
+- **Step 2:** Right-click on the image, and then choose "Copy image address" from the context menu.
+- **Step 3:** Paste the image adress into the input field and click the "Detect" button
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Important Note About Facial Recognition
+**Please be aware that the facial recognition feature in this project relies on the Clarifai API's Image Detection Model. While this model is powerful and accurate in many cases, it may not always detect faces and images correctly, or at all.**
 
-### `npm test`
+### Potential Limitations
+**Image Quality:** The accuracy of the facial recognition may be affected by the quality of the images supplied to the model. Low-resolution, heavily compressed, or heavily distorted images may lead to suboptimal results.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Lighting Conditions:** The model's performance could be influenced by lighting conditions in the images. Poor lighting, extreme shadows, or overexposure might reduce the accuracy of face detection.
 
-### `npm run build`
+**Pose and Angle:** The model's ability to detect faces could be impacted by the pose or angle of the subjects in the images. Profiles, extreme angles, or partially obstructed faces might pose challenges.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Recommendations for Users 
+To mitigate potential issues with facial recognition, I recommend the following:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Use High-Quality Images:** Whenever possible, provide high-quality images with clear and well-lit faces for the best results.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Reporting Issues 
+If you encounter consistent problems with the facial recognition feature or have specific cases where it fails, please feel free to report any issues in this GitHub repository.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
