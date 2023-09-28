@@ -29,12 +29,12 @@ To Start The React App in your browser:
 - **Step 4:** Run ```npm start``` 
 
 To use Clarifai's Facial Recognition API, follow these steps: 
-- **Step 1:** Find an image of a person using any web search engine.
-- **Step 2:** Right-click on the image, and then choose "Copy image address" from the context menu.
+- **Step 1:** Find an image of a person using any web search engine
+- **Step 2:** Right-click on the image and choose "Copy image address" from the context menu
 - **Step 3:** Paste the image adress into the input field and click the "Detect" button
 
 ## Important Note About Facial Recognition
-**Please be aware that the facial recognition feature in this project relies on the Clarifai API's Image Detection Model. While this model is powerful and accurate in many cases, it may not always detect faces and images correctly, or at all.**
+**Please be aware that the facial recognition feature in this project relies on the Clarifai API's Image Detection Model. While this model is powerful and accurate in many cases, it may not always detect faces and images correctly.**
 
 ### Potential Limitations
 **Image Quality:** The accuracy of the facial recognition may be affected by the quality of the images supplied to the model. Low-resolution, heavily compressed, or heavily distorted images may lead to suboptimal results.
@@ -49,7 +49,7 @@ To mitigate potential issues with facial recognition, I recommend the following:
 **Use High-Quality Images:** Whenever possible, provide high-quality images with clear and well-lit faces for the best results.
 
 ### Reporting Issues 
-If you encounter consistent problems with the facial recognition feature or have specific cases where it fails, please feel free to report any issues in this GitHub repository.
+If you encounter consistent problems with the facial recognition feature or have specific cases where it fails, please report any issues in this GitHub repository.
 
 
 
